@@ -75,13 +75,6 @@
                     <small class="text-muted">Scegli il rating</small>
                   </div>
             </div>
-            {{-- <div class="col-3">
-                <div class="mb-3">
-                    <label for="rating" class="form-label">Rating</label>
-                    <input type="text" class="form-control" id="rating" name="rating" value="{{ old('rating', $registry->rating) }}" placeholder="ad es. A" required>
-                    <small class="text-muted">Inserisci il rating</small>
-                  </div>
-            </div> --}}
             <div class="col-5">
                 <div class="mb-3">
                     <label for="chamber_of_commerce" class="form-label">Carica Visura Catastale</label>

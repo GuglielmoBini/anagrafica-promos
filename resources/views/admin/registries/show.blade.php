@@ -18,7 +18,7 @@
               <div class="card-text mb-3"><strong>Codice Fiscale: </strong>{{ $registry->tax_id_code }}</div>
               <div class="card-text mb-3"><strong>Data inizio attività: </strong>{{ $registry->activity_start_date }}</div>
               <div class="card-text mb-3"><strong>Rating: </strong>{{ $registry->rating }}</div>
-              <div class="card-text mb-3"><strong>Visura camerale: </strong>{{ $registry->chamber_of_commerce }}</div>
+              <div class="card-text mb-3"><strong>Visura camerale: </strong>@if($registry->chamber_of_commerce) <i class="fa-solid fa-check" style="color: green;"></i> @else <i class="fa-solid fa-x" style="color: red;"></i> @endif</div>
               <div class="card-text mb-3"><strong>Email: </strong>{{ $registry->email }}</div>
               <div class="card-text mb-3"><strong>Telefono: </strong>{{ $registry->phone_number }}</div>
               <div class="card-text mb-3"><strong>Username: </strong>{{ $registry->username }}</div>
