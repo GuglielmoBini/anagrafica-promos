@@ -3,7 +3,7 @@
 @section('content')
 <section id="detail">
     <header>
-        <h1 class="my-3">{{ $registry->business_name }}</h1>
+        <h1 class="my-5">Dettaglio Azienda: </h1>
     </header>
     <div class="d-flex flex-column align-items-center">
         <div class="card col-6 mb-4">
