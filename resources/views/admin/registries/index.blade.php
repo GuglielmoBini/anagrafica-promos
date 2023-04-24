@@ -24,31 +24,31 @@
             </tr>
           </thead>
           <tbody>
-            @forelse ($companies as $company)
+            @forelse ($registries as $registry)
             <tr class="text-center">
-                <th scope="row" class="border-start">{{ $company->id }}</th>
-                <td>{{ $company->business_name }}</td>
-                <td>{{ $company->status }}</td>
-                <td>{{ $company->sector }}</td>
-                <td>{{ $company->vat_number }}</td>
-                <td>{{ $company->tax_id_code }}</td>
-                <td>{{ $company->activity_start_date }}</td>
-                <td>{{ $company->rating }}</td>
-                <td>{{ $company->email }}</td>
-                <td>{{ $company->phone_number }}</td>
-                <td>{{ $company->username }}</td>
+                <th scope="row" class="border-start">{{ $registry->id }}</th>
+                <td>{{ $registry->business_name }}</td>
+                <td>{{ $registry->status }}</td>
+                <td>{{ $registry->sector }}</td>
+                <td>{{ $registry->vat_number }}</td>
+                <td>{{ $registry->tax_id_code }}</td>
+                <td>{{ $registry->activity_start_date }}</td>
+                <td>{{ $registry->rating }}</td>
+                <td>{{ $registry->email }}</td>
+                <td>{{ $registry->phone_number }}</td>
+                <td>{{ $registry->username }}</td>
                 <td class="border">
                     <div class="d-flex align-items-center justify-content-center">
-                        <a href="{{ route('admin.registries.show', $company->id) }}" class="btn btn-success">
+                        <a href="{{ route('admin.registries.show', $registry->id) }}" class="btn btn-success">
                             <i class="fa-solid fa-eye"></i>
                         </a>
-                        <a href="{{ route('admin.registries.edit', $company->id) }}" class="btn btn-warning mx-4">
+                        <a href="{{ route('admin.registries.edit', $registry->id) }}" class="btn btn-warning mx-4">
                             <i class="fa-solid fa-pencil"></i>
                         </a>
-                        <form action="{{ route('admin.registries.destroy', $company->id) }}" method="POST">
+                        <form action="{{ route('admin.registries.destroy', $registry->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro di voler cancellare questa azienda?')"><i class="fa-solid fa-trash"></i></button>
                         </form>
                     </div>
                 </td>

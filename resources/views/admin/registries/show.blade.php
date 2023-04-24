@@ -18,6 +18,7 @@
               <div class="card-text mb-3"><strong>Codice Fiscale: </strong>{{ $registry->tax_id_code }}</div>
               <div class="card-text mb-3"><strong>Data inizio attività: </strong>{{ $registry->activity_start_date }}</div>
               <div class="card-text mb-3"><strong>Rating: </strong>{{ $registry->rating }}</div>
+              <div class="card-text mb-3"><strong>Visura camerale: </strong>{{ $registry->chamber_of_commerce }}</div>
               <div class="card-text mb-3"><strong>Email: </strong>{{ $registry->email }}</div>
               <div class="card-text mb-3"><strong>Telefono: </strong>{{ $registry->phone_number }}</div>
               <div class="card-text mb-3"><strong>Username: </strong>{{ $registry->username }}</div>
@@ -32,7 +33,7 @@
           <form action="{{ route('admin.registries.destroy', $registry->id) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro di voler cancellare questa azienda?')"><i class="fa-solid fa-trash"></i></button>
         </form>
         </div>
     </div>

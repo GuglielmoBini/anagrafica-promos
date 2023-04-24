@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="col-3 text-center mt-5">
-            <a class="btn btn-primary" href="{{url('/') }}">{{ __('Home') }}</a>
+            <a class="btn btn-primary" href="{{ route('admin.registries.index') }}">{{ __('VAI ALLE AZIENDE') }}</a>
         </div>
     </div>
 </div>
