@@ -10,7 +10,6 @@
             <tr class="text-center">
               <th scope="col">#</th>
               <th scope="col">Ragione Sociale</th>
-              <th scope="col">Tipo</th>
               <th scope="col">Settore</th>
               <th scope="col">P. IVA</th>
               <th scope="col">CF</th>
@@ -36,7 +35,6 @@
                 <td>{{ $company->email }}</td>
                 <td>{{ $company->phone_number }}</td>
                 <td>{{ $company->username }}</td>
-                <td>{{ $company->created_at }}</td>
                 <td class="border-end">
                     <div class="d-flex align-items-center justify-content-center">
                         <a href="{{ route('admin.registries.show', $company->id) }}" class="btn btn-success">
