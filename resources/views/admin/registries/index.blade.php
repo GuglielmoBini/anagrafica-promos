@@ -10,6 +10,7 @@
             <tr class="text-center">
               <th scope="col">#</th>
               <th scope="col">Ragione Sociale</th>
+              <th scope="col">Tipo</th>
               <th scope="col">Settore</th>
               <th scope="col">P. IVA</th>
               <th scope="col">CF</th>
@@ -27,6 +28,7 @@
             <tr class="text-center">
                 <th scope="row" class="border-start">{{ $company->id }}</th>
                 <td>{{ $company->business_name }}</td>
+                <td>{{ $company->status }}</td>
                 <td>{{ $company->sector }}</td>
                 <td>{{ $company->vat_number }}</td>
                 <td>{{ $company->tax_id_code }}</td>
@@ -35,7 +37,7 @@
                 <td>{{ $company->email }}</td>
                 <td>{{ $company->phone_number }}</td>
                 <td>{{ $company->username }}</td>
-                <td class="border-end">
+                <td class="border">
                     <div class="d-flex align-items-center justify-content-center">
                         <a href="{{ route('admin.registries.show', $company->id) }}" class="btn btn-success">
                             <i class="fa-solid fa-eye"></i>
