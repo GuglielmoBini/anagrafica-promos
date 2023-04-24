@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Registry;
 use Illuminate\Http\Request;
 
 class RegistryController extends Controller
@@ -12,7 +13,8 @@ class RegistryController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Registry::all();
+        return view('admin.registries.index', compact('companies'));
     }
 
     /**
